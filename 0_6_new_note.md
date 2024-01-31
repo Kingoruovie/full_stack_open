@@ -1,0 +1,14 @@
+sequenceDiagram
+    participant browser
+    participant server
+    
+    browser->>server: GET 
+https://studies.cs.helsinki.fi/exampleapp/main.css
+    activate server
+    server-->>browser: CSS document
+    deactivate server
+
+    browser->>server: POSThttps://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    activate server
+    server-->>browser: {"message":"note created"}
+    deactivate server
